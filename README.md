@@ -4,9 +4,7 @@
 
 ## Descrição
 
-> Desenvolvi este chatbot web interativo utilizando Python (Flask) e JavaScript como parte do Challenge "Experiência Conversacional".
-> O objetivo é oferecer aos fãs da FURIA Esports uma forma prática e engajadora de obter informações atualizadas sobre o time de CS, como line-up, agenda, resultados, além de interagir com quizzes e trivias.
-> O projeto utiliza processamento básico de linguagem natural (spaCy) e armazena dados em SQLite, buscando oferecer uma experiência de usuário fluida e informativa.
+> *Desenvolvi este chatbot web interativo utilizando Python (Flask) e JavaScript como parte do Challenge "Experiência Conversacional". O objetivo é oferecer aos fãs da FURIA Esports uma forma prática e engajadora de obter informações atualizadas sobre o time de CS, como line-up, agenda, resultados, além de interagir com quizzes e trivias. O projeto utiliza processamento básico de linguagem natural (spaCy) e armazena dados em SQLite, buscando oferecer uma experiência de usuário fluida e informativa.*
 
 ## Funcionalidades Principais
 
@@ -34,14 +32,13 @@
 * **Outros:** uuid (para IDs de sessão), re (Expressões Regulares)
 
 ## Estrutura do Projeto
-
-[NOME_DA_PASTA_RAIZ]/
+pantera-chatbot/
 │
 ├── app.py             # Aplicação Flask principal, rotas HTTP (/ e /chat)
 ├── logic.py           # Módulo com a lógica do chatbot e processamento de mensagens
 ├── database.py        # Módulo para interação com o DB (conexão, init, funções CRUD)
-├── chatbot_data.db    # Arquivo do banco de dados SQLite (criado na primeira execução)
 ├── requirements.txt   # Lista de dependências Python
+├── .gitignore         # Arquivos/pastas a serem ignorados pelo Git
 ├── static/            # Pasta para arquivos estáticos
 │   ├── css/
 │   │   └── style.css  # Estilos CSS
@@ -50,14 +47,16 @@
 └── templates/         # Pasta para templates HTML (Flask/Jinja2)
 └── index.html     # Estrutura HTML da página do chat
 
+Nota: O arquivo chatbot_data.db é criado na primeira execução e ignorado pelo .gitignore
+
 ## Configuração e Instalação
 
 Siga os passos abaixo para configurar e rodar o projeto localmente:
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone [URL_DO_SEU_REPOSITÓRIO_GITHUB_AQUI]
-    cd [NOME_DA_PASTA_DO_PROJETO]
+    git clone [https://github.com/Israel-Matheus/pantera-chatbot.git](https://github.com/Israel-Matheus/pantera-chatbot.git)
+    cd pantera-chatbot
     ```
 2.  **Crie e Ative um Ambiente Virtual:** (Recomendado)
     ```bash
@@ -78,19 +77,19 @@ Siga os passos abaixo para configurar e rodar o projeto localmente:
     ```bash
     python -m spacy download pt_core_news_sm
     ```
-5.  **Inicialize o Banco de Dados:** (Garante que o arquivo `.db` seja criado com as tabelas e dados iniciais)
-    * *Opcional:* Se o arquivo `chatbot_data.db` já existir de execuções anteriores, você pode deletá-lo antes de rodar o comando abaixo para garantir uma base de dados limpa com os dados mais recentes definidos em `database.py`.
+5.  **Inicialize o Banco de Dados:** (Cria o arquivo `chatbot_data.db` com tabelas e dados iniciais)
+    * *Opcional:* Se o arquivo `chatbot_data.db` já existir, delete-o antes se quiser começar com dados limpos.
     ```bash
     python database.py
     ```
 
 ## Como Rodar
 
-1.  **Inicie o Servidor Flask:**
+1.  **Inicie o Servidor Flask:** (Certifique-se que seu ambiente virtual está ativado)
     ```bash
     python app.py
     ```
-2.  **Acesse no Navegador:** Abra seu navegador e vá para o endereço indicado no console.
+2.  **Acesse no Navegador:** Abra seu navegador e vá para o endereço que aparecer no console.
 
 ## Exemplos de Uso
 
@@ -109,9 +108,8 @@ Você pode interagir com o PanteraBot perguntando sobre:
 
 ## Autor
 
-*_(Israel Matheus)_*
-
+* **Israel Matheus**
 
 ## Licença
 
-*_(Opcional: Especifique uma licença como MIT, ou remova esta seção)_*
+> Distribuído sob a Licença MIT. Veja `LICENSE` para mais informações.
