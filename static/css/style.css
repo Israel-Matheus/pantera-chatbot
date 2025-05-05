@@ -1,0 +1,177 @@
+/* Reset básico e variáveis de cor */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: #121212; /* Fundo geral escuro */
+    --color-surface: #1e1e1e;  /* Fundo do chat e input */
+    --color-text: #ffffff;       /* Texto principal branco */
+    --color-primary: #00aeff;   /* Azul vibrante FURIA */
+    --color-secondary-text: #a0a0a0; /* Texto secundário cinza */
+    --color-user-message-bg: #333333; /* Fundo mensagem usuário */
+    --color-bot-message-bg: var(--color-surface); /* Fundo mensagem bot */
+    --font-main: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Centralizar o chat na tela */
+    padding: 20px;
+}
+
+#chat-container {
+    width: 100%;
+    max-width: 500px; /* Largura máxima do chat */
+    height: 70vh; /* Altura do chat */
+    max-height: 600px; /* Altura máxima */
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Esconde conteúdo que transborda */
+    border: 1px solid var(--color-primary); /* Borda sutil azul */
+    box-shadow: 0 0 15px rgba(0, 174, 255, 0.2); /* Sombra suave azul */
+}
+
+#chat-header {
+    background-color: var(--color-surface);
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-primary); /* Linha azul no header */
+    display: flex;
+    justify-content: space-between; /* Alinha título e indicador */
+    align-items: center;
+}
+
+#chat-header h2 {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#status-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #28a745; /* Verde para online */
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 5px #28a745;
+}
+
+
+#chat-output {
+    flex-grow: 1; /* Ocupa o espaço disponível */
+    overflow-y: auto; /* Habilita scroll vertical */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Espaço entre mensagens */
+    background-color: var(--color-background); /* Fundo da área de mensagens */
+}
+
+/* Estilo geral das mensagens */
+.message {
+    max-width: 80%;
+    padding: 0.7rem 1rem;
+    border-radius: 15px;
+    line-height: 1.4;
+    word-wrap: break-word; /* Quebra palavras longas */
+}
+
+.message p {
+    margin: 0;
+    color: var(--color-text);
+    white-space: pre-wrap;
+}
+
+/* Mensagens do Bot */
+.bot-message {
+    background-color: var(--color-bot-message-bg);
+    color: var(--color-secondary-text);
+    align-self: flex-start; /* Alinha à esquerda */
+    border-bottom-left-radius: 0; /* Canto reto para indicar origem */
+     border: 1px solid var(--color-primary); /* Borda sutil azul */
+}
+
+.bot-message p {
+     color: var(--color-text); /* Texto branco para bot */
+}
+
+/* Mensagens do Usuário */
+.user-message {
+    background-color: var(--color-primary); /* Fundo azul */
+    color: var(--color-surface); /* Texto escuro na msg azul */
+    align-self: flex-end; /* Alinha à direita */
+    border-bottom-right-radius: 0; /* Canto reto para indicar origem */
+}
+
+.user-message p {
+    color: var(--color-background); /* Texto escuro */
+}
+
+/* Área de Input */
+#chat-input-area {
+    display: flex;
+    padding: 0.8rem;
+    border-top: 1px solid var(--color-background);
+    background-color: var(--color-surface);
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid var(--color-secondary-text);
+    border-radius: 20px; /* Bordas arredondadas */
+    background-color: var(--color-background);
+    color: var(--color-text);
+    outline: none; /* Remove a borda de foco padrão */
+    margin-right: 0.5rem;
+    transition: border-color 0.3s ease;
+}
+
+#user-input:focus {
+    border-color: var(--color-primary); /* Borda azul ao focar */
+}
+
+#send-button {
+    background-color: var(--color-primary);
+    color: var(--color-background); /* Texto escuro no botão */
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#send-button:hover {
+    background-color: #008fcc; /* Azul mais escuro no hover */
+}
+
+#send-button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Scrollbar (Opcional, para navegadores WebKit) */
+#chat-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-output::-webkit-scrollbar-track {
+    background: var(--color-background);
+}
+
+#chat-output::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    border: 2px solid var(--color-background);
+}

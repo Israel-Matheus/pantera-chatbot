@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Estilo Furia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-header">
+            <h2>Chatbot FURIA Style</h2>
+            <span id="status-indicator" title="Online"></span>
+        </div>
+
+        <div id="personalized-greeting">
+            {% if favorite_player %}
+                {# Escolhe uma saudação aleatória se tiver jogador favorito #}
+                {% set personalized_greetings = [
+                    "Opa! Bem-vindo(a) de volta! Vi que você curte o <strong>" ~ favorite_player ~ "</strong>!",
+                    "E aí! Que bom te ver de novo! Falando no <strong>" ~ favorite_player ~ "</strong>...",
+                    "Salve! Notei que o <strong>" ~ favorite_player ~ "</strong> é seu preferido!"
+                ] %}
+                <p>{{ personalized_greetings[0] | safe }}</p> {# Exibe a saudação personalizada #}
+            {% endif %}
+        </div>
+        <div id="chat-output">
+            {# Loop Jinja para exibir o histórico #}
+            {% if chat_history %}
+                {% for message in chat_history %}
+                    <div class="message {{ 'user-message' if message.sender == 'user' else 'bot-message' }}">
+                        <p>{{ message.text | safe }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div id="chat-input-area">
+            <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+            <button id="send-button">Enviar</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
