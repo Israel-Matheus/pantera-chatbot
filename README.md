@@ -1,6 +1,6 @@
 # PanteraBot: Chatbot Interativo da FURIA
 
-**(Projeto para Challenge #1: Experiência Conversacional FURIA)**
+**(Projeto Experiência Conversacional)**
 
 ## Descrição
 
