@@ -36,7 +36,6 @@
 ```
 pantera-chatbot/
 │
-├── .gitignore         # Arquivos/pastas ignorados pelo Git
 ├── app.py             # Aplicação Flask principal, rotas HTTP (/ e /chat)
 ├── database.py        # Módulo para interação com o DB (conexão, init, funções CRUD)
 ├── logic.py           # Módulo com a lógica do chatbot e processamento de mensagens
@@ -48,8 +47,6 @@ pantera-chatbot/
 │       └── chat.js    # Lógica JavaScript do frontend
 └── templates/         # Pasta para templates HTML (Flask/Jinja2)
     └── index.html     # Estrutura HTML da página do chat
-
-# Nota: O arquivo chatbot_data.db é criado na primeira execução e ignorado pelo .gitignore
 ```
 
 ## Configuração e Instalação
