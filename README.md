@@ -57,10 +57,13 @@ Opção Trivia
 Sobre o último jogo
 ![Ultimo](imgs/ultimo_jogo.png)
 
+Quiz um
 ![Um](imgs/quiz_um.png)
 
+Quiz dois
 ![Dois](imgs/quiz_dois.png)
 
+Quiz três
 ![Tres](imgs/quiz_tres.png)
 
 ## Estrutura do Projeto
