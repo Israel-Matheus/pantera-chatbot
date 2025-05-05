@@ -112,4 +112,4 @@ Você pode interagir com o PanteraBot perguntando sobre:
 
 ## Licença
 
-> Distribuído sob a Licença MIT. Veja `LICENSE` para mais informações.
+> Distribuído sob a Licença MIT. Veja `LICENSE.md` para mais informações.
