@@ -107,15 +107,6 @@ Você pode interagir com o PanteraBot perguntando sobre:
 * `/trivia`
 * `/quiz` (e depois respondendo A, B ou C)
 
-## Próximos Passos / Melhorias Futuras (Opcional)
-
-*_(Liste aqui algumas das ideias que tivemos e não implementamos, ou outras que você tenha tido)_*
-* Implementar tratamento diferenciado para resposta "Não" às sugestões contextuais.
-* Expandir a base de dados com mais conteúdo (quiz, trivia, histórico de jogos).
-* Integrar informações sobre o time de LoL da FURIA.
-* Refinar o NLP para entender perguntas mais complexas.
-* Adicionar sistema de notícias ou placares em tempo real.
-
 ## Autor
 
 *_(Israel Matheus)_*
