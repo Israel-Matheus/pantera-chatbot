@@ -31,6 +31,38 @@
 * **Gerenciamento de Sessão:** Flask Session
 * **Outros:** uuid (para IDs de sessão), re (Expressões Regulares)
 
+## Imagens do projeto
+
+Mensagem inicial
+![Inicio](imgs/inicio.png)
+
+Mensagem de ajuda
+![Ajuda](imgs/pedido_de_ajuda.png)
+
+Jogadores atuais
+![Atuais](imgs/jogadores_atuais.png)
+
+Prefência FalleN
+![Pref](imgs/pref_fallen.png)
+
+Perguntando quem é FalleN
+![Perguntando](imgs/quem_e_tal_jogador.png)
+
+Questionando quem é o IGL do time
+![Quem](imgs/sobre_o_igl.png)
+
+Opção Trivia
+![Trivia](imgs/trivia.png)
+
+Sobre o último jogo
+![Ultimo](imgs/ultimo_jogo.png)
+
+![Um](imgs/quiz_um.png)
+
+![Dois](imgs/quiz_dois.png)
+
+![Tres](imgs/quiz_tres.png)
+
 ## Estrutura do Projeto
 
 ```
